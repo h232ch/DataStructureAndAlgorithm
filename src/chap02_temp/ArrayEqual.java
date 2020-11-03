@@ -18,6 +18,8 @@ public class ArrayEqual {
         int[] b = a.clone();
         int[] c = {1,2,3,4,5};
 
+
+
         System.out.println(equals(a,b)?"It's equal":"It's different");
         System.out.println(equals(a,c)?"It's equal":"It's different");
         
