@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 public class BinarySearchTester {
 
-
-
     public static void main(String[] args){
 
         Scanner scanner = new Scanner(System.in);
@@ -32,7 +30,7 @@ public class BinarySearchTester {
 
         int idx = Arrays.binarySearch(x, ky);
         if (idx < 0)
-            System.out.println("그 값의 요소가 없습니다.");
+            System.out.println("그 값의 요소가 없습니다."+idx);
         else
             System.out.println(ky+"은(는) x["+idx+"]에 있습니다.");
     }
