@@ -1,6 +1,7 @@
 package chap05_temp;
 
-public class HanoiNone {
+public class HanoiNone2 {
+
     public static void hanoi(int num, int src, int dst) {
 
         if (num > 0) {
@@ -12,22 +13,17 @@ public class HanoiNone {
 
     public static void noneHanoi(int num, int src, int dst) {
 
-        int[] nstk = new int[5];
-        int[] sstk = new int[5];
-        int[] dstk = new int[5];
-        int[] swstk = new int[5];
-
+        int[][] mult = new int[5][5];
         int pts = -1; int sw = 0; int cnt = 0;
         int obj = (int)Math.pow(2,num);
 
         while (cnt < obj-1) {
             while (num > 0) {
-
                 pts++;
-                nstk[pts] = num;
-                sstk[pts] = src;
-                dstk[pts] = dst;
-                swstk[pts] = sw;
+                mult[pts][0] = num;
+                mult[pts][1] = src;
+                mult[pts][2] = dst;
+                mult[pts][3] = sw;
 
                 if (sw == 0) {
                     num = num - 1;
@@ -35,9 +31,10 @@ public class HanoiNone {
                 }
 
                 else if (sw == 1) {
-                    System.out.println(nstk[pts] + "를 "
-                            + sstk[pts] + " 에서 "
-                            + dstk[pts] + "로 옮깁니다.");
+                    System.out.println(mult[pts][0]
+                            + "를 "
+                            + mult[pts][1] + " 에서 "
+                            + mult[pts][2] + "로 옮깁니다.");
                     cnt++;
                     num = num - 1;
                     if (num == 0) {
@@ -53,15 +50,15 @@ public class HanoiNone {
                     pts--;
                 }
             }
-            num = nstk[pts];
-            dst = dstk[pts];
-            src = sstk[pts];
-            sw = swstk[pts--] + 1;
+            num = mult[pts][0];
+            src = mult[pts][1];
+            dst = mult[pts][2];
+            sw = mult[pts--][3] + 1;
         }
     }
 
     public static void main(String[] args) {
-        hanoi(3, 1, 3);
+//        hanoi(3, 1, 3);
         System.out.println();
         noneHanoi(3, 1, 3);
     }

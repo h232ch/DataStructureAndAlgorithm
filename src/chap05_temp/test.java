@@ -21,5 +21,8 @@ public class test {
 
     public static void main(String[] args) {
         System.out.println((int)Math.pow(2,3));
+
+        int[][] t = new int[5][5];
+        System.out.println(t[0][0]);
     }
 }
