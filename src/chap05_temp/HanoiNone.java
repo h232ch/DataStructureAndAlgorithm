@@ -17,12 +17,10 @@ public class HanoiNone {
         int[] dstk = new int[5];
         int[] swstk = new int[5];
 
-        int pts = -1;
-        int sw = 0;
+        int pts = -1; int sw = 0; int cnt = 0;
+        int obj = (int)Math.pow(2,num);
 
-        int i = 0;
-        while (true) {
-            i++;
+        while (cnt < obj-1) {
             while (num > 0) {
 
                 pts++;
@@ -36,15 +34,11 @@ public class HanoiNone {
                     dst = 6 - src - dst;
                 }
 
-                // 1, 3, 1
-                // 2, 1, 2
-                // 1, 3, 2
-                // 3, 1, 3
-
                 else if (sw == 1) {
                     System.out.println(nstk[pts] + "를 "
                             + sstk[pts] + " 에서 "
                             + dstk[pts] + "로 옮깁니다.");
+                    cnt++;
                     num = num - 1;
                     if (num == 0) {
                         pts--; sw = 0;
@@ -55,7 +49,8 @@ public class HanoiNone {
                 }
 
                 else if (sw == 2) {
-                    pts--; return;
+                    num = 0;
+                    pts--;
                 }
             }
             num = nstk[pts];
@@ -66,7 +61,8 @@ public class HanoiNone {
     }
 
     public static void main(String[] args) {
-//        hanoi(3, 1, 3);
-        noneHanoi(3, 1, 3);
+        hanoi(4, 1, 3);
+        System.out.println();
+        noneHanoi(4, 1, 3);
     }
 }

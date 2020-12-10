@@ -20,6 +20,6 @@ public class test {
     }
 
     public static void main(String[] args) {
-        takeThis();
+        System.out.println((int)Math.pow(2,3));
     }
 }
