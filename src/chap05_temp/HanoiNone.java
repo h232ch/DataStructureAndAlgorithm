@@ -1,8 +1,6 @@
 package chap05_temp;
 
 public class HanoiNone {
-
-
     public static void hanoi(int num, int src, int dst) {
 
         if (num > 0) {
@@ -22,8 +20,11 @@ public class HanoiNone {
         int pts = -1;
         int sw = 0;
 
+        int i = 0;
         while (true) {
+            i++;
             while (num > 0) {
+
                 pts++;
                 nstk[pts] = num;
                 sstk[pts] = src;
@@ -54,17 +55,13 @@ public class HanoiNone {
                 }
 
                 else if (sw == 2) {
-                    pts--;
+                    pts--; return;
                 }
             }
             num = nstk[pts];
             dst = dstk[pts];
             src = sstk[pts];
-            sw = sstk[pts--] + 1;
-            System.out.println(num);
-            System.out.println(dst);
-            System.out.println(src);
-            System.out.println(sw);
+            sw = swstk[pts--] + 1;
         }
     }
 
