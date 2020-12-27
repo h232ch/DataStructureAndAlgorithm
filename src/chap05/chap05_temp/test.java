@@ -1,4 +1,4 @@
-package chap05_temp;
+package chap05.chap05_temp;
 
 public class test {
 
@@ -22,7 +22,8 @@ public class test {
     public static void main(String[] args) {
         System.out.println((int)Math.pow(2,3));
 
-        int[][] t = new int[5][5];
-        System.out.println(t[0][0]);
+        boolean[] flag = new boolean[3];
+
+        System.out.println(flag[0]);
     }
 }

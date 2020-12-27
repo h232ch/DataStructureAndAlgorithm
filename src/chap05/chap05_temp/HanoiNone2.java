@@ -1,4 +1,4 @@
-package chap05_temp;
+package chap05.chap05_temp;
 
 public class HanoiNone2 {
 
