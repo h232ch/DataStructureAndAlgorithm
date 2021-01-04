@@ -21,6 +21,7 @@ public class Q5 {
         int cnt = 0;
 
         while (n < limit - 1) {
+
             if (cnt % 2 == 0) {
                 System.out.println("PASS : " + cnt++);
 
