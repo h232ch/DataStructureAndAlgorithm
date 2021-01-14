@@ -6,8 +6,9 @@ public class IntStackTester {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        IntStack<Integer> s = new IntStack<Integer>(Integer.class,5); // 최대 64개를 푸시할 수 있는 스택
+//        IntStack<Integer> s = new IntStack<Integer>(Integer.class,5); // 최대 64개를 푸시할 수 있는 스택
 
+        IntStack s = new IntStack(5);
         while (true) {
             System.out.println("현재 데이터 수 : " + s.size() + " / " + s.capacity());
             System.out.print("(1)Push (2)Pop (3)Peek (4)Dump (5)Search Number " +
@@ -93,7 +94,7 @@ public class IntStackTester {
                     break;
 
                 case 10:
-                    System.out.println("Pointer Location : " + s.ptrLocation());
+                    System.out.println("Pointer Location : " + s.peek());
                     break;
             }
 
