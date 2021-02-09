@@ -53,7 +53,8 @@ public class PhysicalExamination {
         System.out.println("이름\t키\t시력\t");
         System.out.println("-------------------");
         for(int i = 0; i < x.length; i++){
-            System.out.printf("%-8s%3d%5.1f\n", x[i].name, x[i].height, x[i].vision);
+            System.out.printf("%-8s%3d%5.1f\n", x[i].name, x[i].height, x[i].vision); // %5.1f : %f를 입력하는데 정수는 5자리 소수는 1자리 표현
+            // %-8s : 문자열을 표현하는데 뒤부터 8자리를 띄워서 표현, %3d : 정수를 표현하는데 3자리로 표현
 
         }
         System.out.printf("\n평균 키 : %5.1fcm\n", aveHeight(x));
@@ -65,7 +66,7 @@ public class PhysicalExamination {
 //        }
 
         for(int i = 0; i < VMAX; i++){ // Q10 : 시력분포를 *으로 나타내시오
-            System.out.printf("%3.1f~: ", i / 10.0);
+            System.out.printf("%1.1f: ", i / 10.0);
             for(int j = 0; j < vdist[i]; j++){
                 System.out.print("*");
             }

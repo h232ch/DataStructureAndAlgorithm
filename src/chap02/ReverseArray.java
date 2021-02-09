@@ -15,7 +15,6 @@ public class ReverseArray {
         for(int num: b){
             System.out.print(num+" ");
         }
-
     }
 
     public static void main(String[] args){

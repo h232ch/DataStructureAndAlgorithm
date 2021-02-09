@@ -15,7 +15,6 @@ public class PrimeNumber3 {
         N이 소수인지 판단하기 위해서는 N의 제곱근(n==25 : 5) 하위의 소수와 나누어보면 됨
         제곱근을 구하지 않고 소수를 제곱하여 비교함 (3*3 <= 25, 5*5 <=25)
         위 조건을 포함하여 코드 수행시 계산값을 현저히 줄일 수 있음
-
          */
 
         for (int n = 5 ; n <= 1000; n += 2){
@@ -29,7 +28,7 @@ public class PrimeNumber3 {
             }
             if(!flag){
                 prime[ptr++] = n;
-                counter++;
+                counter++; // 상위 for문에 들어가지 않음으로 prime[i] * prime[i] 연산 1회를 카운터에 반영함
             }
         }
         for(int i = 0; i < ptr; i++){

@@ -13,7 +13,7 @@ public class CloneArray {
             System.out.print(a[i] );
         }
         System.out.println();
-        System.out.println("b = ");
+        System.out.println("b = "); // 변경되지 않음
         for (int i=0; i<b.length; i++){
             System.out.print(b[i] );
         }
