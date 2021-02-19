@@ -9,7 +9,7 @@ public class IntQueue {
     private int[] que;
 
     public static class EmptyIntQueueException extends RuntimeException {
-        EmptyIntQueueException() {}
+        public EmptyIntQueueException() {}
     }
 
     public static class OverflowIntQueueException extends RuntimeException {

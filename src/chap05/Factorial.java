@@ -12,6 +12,14 @@ public class Factorial {
             return 1;
     }
 
+    static int factorialOn(int n) {
+        int factorial = 1;
+        for (int i = 1; i <= n; i++) {
+            factorial *=  i;
+        }
+        return factorial;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -19,5 +27,7 @@ public class Factorial {
         int x = sc.nextInt();
 
         System.out.println(x + "의 팩토리얼은 " + factorial(x) + "입니다.");
+
+        System.out.println(factorialOn(4));
     }
 }

@@ -15,7 +15,7 @@ public class LastNElements {
 
         do {
             System.out.printf("%d번째 정수 : ", cnt + 1);
-            a[cnt++ % N] = sc.nextInt();
+            a[cnt++ % N] = sc.nextInt(); // cnt++ % N
 
             System.out.print("계속 할까요? (예.1/아니오.0 : )");
             retry = sc.nextInt();

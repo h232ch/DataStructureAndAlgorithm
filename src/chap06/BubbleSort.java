@@ -8,7 +8,7 @@ public class BubbleSort {
         int t = a[idx1];
         a[idx1] = a[idx2];
         a[idx2] = t;
-    } // j-1(앞), j(뒤) 값을 비교해서 j값이 작다면 j-1과 바꿔주는 메서드
+    } // j-1(앞), j(뒤) 값을 비교해서 j값이 작다면 j-1과u 바꿔주는 메서드
 
     public static void bubbleSort(int[] a, int n) {
         for (int i=0; i<n-1; i++) {
