@@ -47,8 +47,8 @@ public class AryLinkedList<E> {
             else
                 return NULL; // 용량 넘침
         } else {
-            int rec = deleted; // free 리스트에서
-            deleted = n[rec].dnext; // 머리 rec을 꺼냄
+            int rec = deleted; // free 리스트에서 머리 rec을 꺼냄
+            deleted = n[rec].dnext; // 이후 머리 rec의 dnext값을 deleted로 변환
             return rec;
         }
     }
@@ -59,9 +59,9 @@ public class AryLinkedList<E> {
             deleted = idx; // idx를 deleted에 등록해줌
             n[idx].dnext = NULL; // n[idx].dnext는 존재하지 않음으로 널을 입력함
         } else {
-            int rec = deleted; // 4
-            deleted = idx; // 0
-            n[idx].dnext = rec;  // 고쳐야하는 코드
+            int rec = deleted; // deleted 값을 rec에 넣고
+            deleted = idx; // 신규 idx값으로 변경후
+            n[idx].dnext = rec;  // 신규 deleted의 dnext값을 red(기존deleted)로 변경
         }
     }
 
@@ -147,14 +147,10 @@ public class AryLinkedList<E> {
                         return; // p가 리스트에 없습니다.
                     }
                 }
-
-                System.out.println("P : " + p + ", ptr : " + ptr + ", n[ptr].next : " + n[ptr].next);
-                System.out.println();
                 n[ptr].next = NULL; // p와 일치하는 ptr.next 삭제
                 deleteIndex(p); // 고쳐야하는 코드
                 n[ptr].next = n[p].next;
                 crnt = ptr;
-
             }
         }
     }

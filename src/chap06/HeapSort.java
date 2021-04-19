@@ -31,7 +31,7 @@ public class HeapSort {
 
     static void heapSort(int[] a, int n) {
         for (int i = (n - 1) / 2; i >= 0; i--)
-            downHeap(a, i, n - 1);
+            downHeap(a, i, n - 1); // right의 의미는 배열의 요소수를 의미함
 
         for (int i = n - 1; i > 0; i--) {
             swap(a, 0, i);

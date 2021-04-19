@@ -19,8 +19,8 @@ public class BubbleSort3 {
                     swap(a, j - 1, j);
                     last = j;
                 }
-                k = last; // k 초기값, last 인덱스값 (last 값을 k값으로 계속 바꾸어줌)
             }
+            k = last; // k 초기값, last 인덱스값 (k 값을 last 값으로 계속 바꾸어줌)
         }
     }
 

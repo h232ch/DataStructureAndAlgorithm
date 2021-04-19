@@ -10,6 +10,8 @@ import java.util.stream.Stream;
 
 public class lambdaPrac {
 
+
+
     public static void main(String[] args) {
 
 
@@ -121,6 +123,30 @@ public class lambdaPrac {
                 })
                 .forEach(s -> System.out.println("forEach : " + s));
 
+
+        System.out.println(Integer.MIN_VALUE);
+
+        List<Integer> testList = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            testList.add(i);
+        }
+
+        int a = 10;
+        a = (short) 10;
+
+        short b = 10;
+        b = (int) 10;
+
+        int c = (int) b; // 업캐스틩 이경우 캐스팅을 명시할 필요 없음음
+
+        // 업캐스팅 사용 이유는 다형성성
+
+      System.out.println(a + b);
+
+        // 아래 코드는 에러 발생 (toArray의 리턴값은 Object 형으로 상위 -> 하위(Integer)로 캐스팅 불가
+//        Integer[] testArray1 = (Integer[]) testList.toArray();
+
+        Integer i = new Integer(10);
 
     }
 }
