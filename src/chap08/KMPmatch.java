@@ -26,9 +26,8 @@ public class KMPmatch {
 //        }
 
         pt = pp = 0;
-        int cnt = 0;
         while (pt != txt.length() && pp != pat.length()) {
-            cnt++;
+
             if (txt.charAt(pt) == pat.charAt(pp)) {
                 pt++;
                 pp++;

@@ -37,7 +37,7 @@ public class Q6GenericQue<E> {
      */
 
     public static class EmptyErrorException extends RuntimeException {
-        EmptyErrorException () {
+        public EmptyErrorException() {
             System.out.println("큐가 비어있습니다.");
         }
     }

@@ -96,11 +96,12 @@ public class LinkedList<E> {
         remove(crnt);
     }
 
-    // 모든 노드를 삭제
-    public void clear() {
-        while (head != null) // 노드에 아무것도 없을때까지
-            removeFirst(); // 머리 노드를 삭제함 (Head -> next -> next -> null)
-        crnt = null;
+    // 선택 노드를 출력
+    public void printCurrentNode() {
+        if (crnt == null)
+            System.out.println("선택한 노드가 없습니다.");
+        else
+            System.out.println(crnt.data);
     }
 
     // 선택 노드를 하나 뒤쪽으로 이동
@@ -111,12 +112,11 @@ public class LinkedList<E> {
         return true;
     }
 
-    // 선택 노드를 출력
-    public void printCurrentNode() {
-        if (crnt == null)
-            System.out.println("선택한 노드가 없습니다.");
-        else
-            System.out.println(crnt.data);
+    // 모든 노드를 삭제
+    public void clear() {
+        while (head != null) // 노드에 아무것도 없을때까지
+            removeFirst(); // 머리 노드를 삭제함 (Head -> next -> next -> null)
+        crnt = null;
     }
 
     // 모든 노드를 출력

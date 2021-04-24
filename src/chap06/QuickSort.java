@@ -66,25 +66,31 @@ public class QuickSort {
         if (pl < right) quickSort(a, pl, right);
     }
 
-
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("배열을 나눕니다.");
+//        System.out.print("요솟수 : ");
+//        int nx = sc.nextInt();
+//        int[] x = new int[nx];
+//
+//        for (int i = 0; i < nx; i++) {
+//            System.out.print("x[" + i + "] : ");
+//            x[i] = sc.nextInt();
+//        }
 
-        System.out.println("배열을 나눕니다.");
-        System.out.print("요솟수 : ");
-        int nx = sc.nextInt();
-        int[] x = new int[nx];
-
-        for (int i = 0; i < nx; i++) {
-            System.out.print("x[" + i + "] : ");
-            x[i] = sc.nextInt();
-        }
+        int[] x = {3,4,46,4,7,7,4,45,3,43,5,6,7,6};
+        int nx = x.length;
 
         quickSort(x, 0, nx - 1);
 
-        System.out.println("오름차순으로 정렬했습니다.");
-        for (int i = 0; i < nx; i++)
-            System.out.println("x[" + i + "]=" + x[i]);
+//        System.out.println("오름차순으로 정렬했습니다.");
+//        for (int i = 0; i < nx; i++)
+//            System.out.println("x[" + i + "]=" + x[i]);
+
+        for (int temp : x) {
+            System.out.printf("%3d", temp);
+        }
 
     }
 }
