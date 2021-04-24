@@ -17,7 +17,6 @@ public class BMmatch {
         System.out.print("Skip Table : ");
         for (pt = 0; pt < patLen - 1; pt++) {
             skip[pat.charAt(pt)] = patLen - pt - 1; //pt == patLen - 1;
-            System.out.printf("%3c %3d %c",pat.charAt(pt) , skip[pat.charAt(pt)], (pt == patLen - 2) ? '\n' : ' ');
         }
 
         while (pt < txtLen) {
@@ -38,6 +37,6 @@ public class BMmatch {
         String s1 = "ABCKDJFJSDHSUSUYFJSKD";
         String s2 = "DHSU";
 
-        System.out.println("Matching PT Number : " + bmMatch(s1, s2));
+        System.out.println("Matching PT Number is " + bmMatch(s1, s2));
     }
 }

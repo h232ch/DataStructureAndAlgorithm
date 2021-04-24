@@ -49,14 +49,14 @@ public class IntQueueTester {
                     s.dump();
                     break;
 
-                case 5:
-                    try {
-                        System.out.print("데이터 : ");
-                        x = sc.nextInt();
-                        System.out.println("검색한 큐의 위치 : " + s.search(x));
-                    } catch (IntQueue.EmptyIntQueueException e) {
-                        System.out.println("큐가 비어 있습니다.");
-                    }
+//                case 5:
+//                    try {
+//                        System.out.print("데이터 : ");
+//                        x = sc.nextInt();
+//                        System.out.println("검색한 큐의 위치 : " + s.search(x));
+//                    } catch (IntQueue.EmptyIntQueueException e) {
+//                        System.out.println("큐가 비어 있습니다.");
+//                    }
             }
         }
     }
